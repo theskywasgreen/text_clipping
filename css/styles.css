@@ -28,3 +28,20 @@
     color: #eaff00;
     background: #3efdff;
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0); }
+
+/** STATES */
+/** state 2 */
+#state2:checked ~ .clip::before {
+  clip-path: polygon(0 0, 80% 0, 0 100%, 0 100%); }
+#state2:checked ~ .clip::after {
+  clip-path: polygon(100% 0, 100% 100%, 20% 100%, 100% 0); }
+
+#state3:checked ~ .clip::before {
+  clip-path: polygon(0 0, 40% 0, 40% 100%, 0 100%); }
+#state3:checked ~ .clip::after {
+  clip-path: polygon(100% 0, 100% 100%, 60% 100%, 60% 0); }
+
+#state4:checked ~ .clip::before {
+  clip-path: polygon(100% 0, 0 0, 100% 100%, 0 100%); }
+#state4:checked ~ .clip::after {
+  clip-path: polygon(100% 0, 100% 100%, 0 0, 0 100%); }
