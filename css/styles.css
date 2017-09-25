@@ -30,7 +30,6 @@
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 100% 0); }
 
 /** STATES */
-/** state 2 */
 #state2:checked ~ .clip::before {
   clip-path: polygon(0 0, 80% 0, 0 100%, 0 100%); }
 #state2:checked ~ .clip::after {
@@ -45,3 +44,32 @@
   clip-path: polygon(100% 0, 0 0, 100% 100%, 0 100%); }
 #state4:checked ~ .clip::after {
   clip-path: polygon(100% 0, 100% 100%, 0 0, 0 100%); }
+
+/** CONTROLS */
+.control-flag {
+  position: absolute;
+  left: -9999px; }
+
+.controls {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0; }
+
+.controls__btn {
+  display: inline-block;
+  padding: 5px;
+  background: #fff;
+  color: #000;
+  cursor: pointer; }
+
+#state1:checked ~ .controls .controls__btn[for="state1"],
+#state2:checked ~ .controls .controls__btn[for="state2"],
+#state3:checked ~ .controls .controls__btn[for="state3"],
+#state4:checked ~ .controls .controls__btn[for="state4"] {
+  background: #000;
+  color: #fff;
+  cursor: default; }

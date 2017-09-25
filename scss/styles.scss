@@ -46,7 +46,6 @@ $green: #eaff00;
 }
 
 /** STATES */
-/** state 2 */
 #state2:checked {
   ~ {
     .clip {
@@ -84,4 +83,38 @@ $green: #eaff00;
       }
     }
   }
+}
+
+/** CONTROLS */
+.control-flag {
+  position: absolute;
+  left: -9999px;
+}
+
+.controls {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.controls__btn {
+  display: inline-block;
+  padding: 5px;
+  background: $white;
+  color: $black;
+  cursor: pointer;
+}
+
+// show active state
+#state1:checked ~ .controls .controls__btn[for="state1"],
+#state2:checked ~ .controls .controls__btn[for="state2"],
+#state3:checked ~ .controls .controls__btn[for="state3"],
+#state4:checked ~ .controls .controls__btn[for="state4"]{
+  background: $black;
+  color: $white;
+  cursor: default;
 }
