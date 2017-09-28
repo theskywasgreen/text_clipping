@@ -31,7 +31,7 @@ $green: #eaff00;
   &::before,
   &::after {
     content: attr(data-content);
-    transition: clip-path 500ms;
+    transition: clip-path 5000ms;
   }
   &::before {
     color: $white;

@@ -19,7 +19,7 @@
     box-sizing: border-box; }
   .clip::before, .clip::after {
     content: attr(data-content);
-    transition: clip-path 500ms; }
+    transition: clip-path 5000ms; }
   .clip::before {
     color: #fff;
     background: #eaff00;
